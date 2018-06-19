@@ -12,6 +12,8 @@
 
 #### 4. [Android各大手机品牌手机跳转到权限管理界面](https://blog.csdn.net/qq_35100676/article/details/74977897)
 
+[Android调app权限设置界面（适配各大手机厂商终极版本）](https://blog.csdn.net/JUSTYiSheng/article/details/79556017)
+
 
 
 
