@@ -10,6 +10,8 @@
 
 #### 3. [Retrofit2完全教程](https://www.jianshu.com/p/308f3c54abdd)
 
+#### 4. [Android各大手机品牌手机跳转到权限管理界面](https://blog.csdn.net/qq_35100676/article/details/74977897)
+
 
 
 
