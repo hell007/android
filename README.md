@@ -6,6 +6,10 @@
 
 #### 2. [网络加载框架 - Retrofit](https://www.jianshu.com/p/0fda3132cf98)
 
-Retrofit + RXjava 开发模式
+  Retrofit + RXjava 开发模式
+
+#### 3. [Retrofit2完全教程](https://www.jianshu.com/p/308f3c54abdd)
+
+
 
 
