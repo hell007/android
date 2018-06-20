@@ -14,6 +14,10 @@
 
 [Android调app权限设置界面（适配各大手机厂商终极版本）](https://blog.csdn.net/JUSTYiSheng/article/details/79556017)
 
+#### 5. [Realm for Android 使用入门](https://blog.csdn.net/u012426327/article/details/77992865)
+
+[官方文档地址](https://realm.io/docs/java/latest/)
+
 
 
 
