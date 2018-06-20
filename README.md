@@ -16,7 +16,11 @@
 
 #### 5. [Realm for Android 使用入门](https://blog.csdn.net/u012426327/article/details/77992865)
 
-[官方文档地址](https://realm.io/docs/java/latest/)
+[Realm 官方文档地址](https://realm.io/docs/java/latest/)
+
+#### 6. [Tinker使用入门](https://blog.csdn.net/z2464342708m/article/details/54425410)
+
+[tinker 官方文档](https://github.com/Tencent/tinker/wiki)
 
 
 
