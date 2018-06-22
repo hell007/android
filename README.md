@@ -2,6 +2,8 @@
 
 ##  Android开发知识汇总
 
+#### 0. [Android屏幕适配方案](https://github.com/PangHaHa12138/AndroidAutoLayout)
+
 #### 1. [Android4种网络连接方式HttpClient、HttpURLConnection、OKHttp和Volley优缺点和性能对比](https://blog.csdn.net/zhangcanyan/article/details/51793951)
 
 #### 2. [网络加载框架 - Retrofit](https://www.jianshu.com/p/0fda3132cf98)
@@ -28,6 +30,12 @@
 ## 组件收藏
 
 [PlayerBase-视频播放组件](https://github.com/jiajunhui/PlayerBase)
+
+[高仿ios时间选择控件timepicker](https://github.com/PangHaHa12138/TimePackdemo)
+
+[citypicker](https://github.com/crazyandcoder/citypicker)
+
+[各种popwindow和dialog弹窗](https://github.com/PangHaHa12138/ManyPopWindowAndDialog)
 
 
 
