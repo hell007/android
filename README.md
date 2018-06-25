@@ -4,11 +4,13 @@
 
 #### Android 目前最稳定和高效的UI适配方案
 
- [dp直接适配]()
+ [dp直接适配](http://www.cnblogs.com/tc310/p/9200478.html)
 
- [UI适配框架]((https://github.com/PangHaHa12138/AndroidAutoLayout))
+ [UI适配框架](https://github.com/hongyangAndroid/AndroidAutoLayout)
  
  [smallestWidth适配](http://www.cnblogs.com/tc310/p/9200478.html)
+ 
+ [smallestWidth适配案列](https://github.com/ladingwu/dimens_sw)
 
 #### 1. [Android4种网络连接方式HttpClient、HttpURLConnection、OKHttp和Volley优缺点和性能对比](https://blog.csdn.net/zhangcanyan/article/details/51793951)
 
