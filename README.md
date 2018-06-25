@@ -8,9 +8,11 @@
 
  [UI适配框架](https://github.com/hongyangAndroid/AndroidAutoLayout)
  
- [smallestWidth适配](http://www.cnblogs.com/tc310/p/9200478.html)
+ [smallestWidth适配](https://juejin.im/post/5ae9cc3a5188253dc612842b)
  
  [smallestWidth适配案列](https://github.com/ladingwu/dimens_sw)
+ 
+ [今日头条适配方案](https://mp.weixin.qq.com/s/d9QCoBP6kV9VSWvVldVVwA)
 
 #### 1. [Android4种网络连接方式HttpClient、HttpURLConnection、OKHttp和Volley优缺点和性能对比](https://blog.csdn.net/zhangcanyan/article/details/51793951)
 
