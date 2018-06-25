@@ -2,7 +2,13 @@
 
 ##  Android开发知识汇总
 
-#### 0. [Android屏幕适配方案](https://github.com/PangHaHa12138/AndroidAutoLayout)
+#### Android 目前最稳定和高效的UI适配方案
+
+ [dp直接适配]()
+
+ [UI适配框架]((https://github.com/PangHaHa12138/AndroidAutoLayout))
+ 
+ [smallestWidth适配](http://www.cnblogs.com/tc310/p/9200478.html)
 
 #### 1. [Android4种网络连接方式HttpClient、HttpURLConnection、OKHttp和Volley优缺点和性能对比](https://blog.csdn.net/zhangcanyan/article/details/51793951)
 
