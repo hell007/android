@@ -34,6 +34,11 @@
 2. [Android调app权限设置界面（适配各大手机厂商终极版本）](https://blog.csdn.net/JUSTYiSheng/article/details/79556017)
 
 
+## Android-图片处理
+
+1. [glide-v4](https://muyangmin.github.io/glide-docs-cn/)
+
+
 
 ## Android-数据库管理
 
