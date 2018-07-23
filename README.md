@@ -61,7 +61,7 @@
 
 [PlayerBase-视频播放组件](https://github.com/jiajunhui/PlayerBase)
 
-[高仿ios时间选择控件timepicker](https://github.com/PangHaHa12138/TimePackdemo)
+[高仿ios时间选择控件timepicker](https://github.com/Bigkoo/Android-PickerView)
 
 [citypicker](https://github.com/crazyandcoder/citypicker)
 
