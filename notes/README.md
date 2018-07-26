@@ -11,3 +11,13 @@
 
 3. [DataBinding难点解析之Observable和BindingAdapter（二）](https://www.jianshu.com/p/686bfc58bbb0)
 
+
+##### pull
+
+1. [安卓开发由一个APP拉起另一个APP的方法总结](https://blog.csdn.net/zang_chen/article/details/76677846)
+
+
+##### push
+
+1. [消息推送]()
+
