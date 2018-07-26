@@ -16,6 +16,8 @@
 
 1. [安卓开发由一个APP拉起另一个APP的方法总结](https://blog.csdn.net/zang_chen/article/details/76677846)
 
+2. [Android APP打开另一个APP完整逻辑实现](https://blog.csdn.net/DT235201314/article/details/80255143)
+
 
 ##### push
 
