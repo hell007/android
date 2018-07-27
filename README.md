@@ -40,12 +40,13 @@
 
 
 
-## Android-数据库管理
+## Android-数据库管理框架
 
 1. [Realm for Android 使用入门](https://blog.csdn.net/u012426327/article/details/77992865)
 
 [Realm 官方文档地址](https://realm.io/docs/java/latest/)
 
+2. [Android 数据库框架总结](https://blog.csdn.net/da_caoyuan/article/details/61414626)
 
 
 ## Android-热更新
