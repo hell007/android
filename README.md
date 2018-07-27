@@ -21,8 +21,6 @@
 
 2. [网络加载框架 - Retrofit](https://www.jianshu.com/p/0fda3132cf98)
 
-    Retrofit + RXjava 开发模式
-
 3. [Retrofit2完全教程](https://www.jianshu.com/p/308f3c54abdd)
 
 
@@ -44,7 +42,7 @@
 
 1. [Realm for Android 使用入门](https://blog.csdn.net/u012426327/article/details/77992865)
 
-[Realm 官方文档地址](https://realm.io/docs/java/latest/)
+   [Realm 官方文档地址](https://realm.io/docs/java/latest/)
 
 2. [Android 数据库框架总结](https://blog.csdn.net/da_caoyuan/article/details/61414626)
 
@@ -53,7 +51,7 @@
 
 1. [Tinker使用入门](https://blog.csdn.net/z2464342708m/article/details/54425410)
 
-[tinker 官方文档](https://github.com/Tencent/tinker/wiki)
+   [tinker 官方文档](https://github.com/Tencent/tinker/wiki)
 
 
 
