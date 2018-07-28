@@ -42,6 +42,8 @@
 
 1. [Realm for Android 使用入门](https://blog.csdn.net/u012426327/article/details/77992865)
 
+   [在Android中使用Realm作本地存储](https://www.jianshu.com/p/8cb639a78975)
+
    [Realm 官方文档地址](https://realm.io/docs/java/latest/)
 
 2. [Android 数据库框架总结](https://blog.csdn.net/da_caoyuan/article/details/61414626)
