@@ -53,6 +53,8 @@
 
 1. [Tinker使用入门](https://blog.csdn.net/z2464342708m/article/details/54425410)
 
+2. [热修复——Tinker的集成与使用](https://github.com/GitLqr/HotFixDemo)
+
    [tinker 官方文档](https://github.com/Tencent/tinker/wiki)
 
 
