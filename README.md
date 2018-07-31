@@ -62,13 +62,13 @@
 
 ## 组件收藏
 
-[PlayerBase-视频播放组件](https://github.com/jiajunhui/PlayerBase)
+1. 城市三级，时间选择控件
 
 [高仿ios时间选择控件timepicker](https://github.com/Bigkoo/Android-PickerView)
 
 [citypicker](https://github.com/crazyandcoder/citypicker)
 
-[各种popwindow和dialog弹窗](https://github.com/PangHaHa12138/ManyPopWindowAndDialog)
+
 
 
 
