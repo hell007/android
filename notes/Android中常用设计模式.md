@@ -780,14 +780,293 @@ Android中的应用
 然后实现不同的View返回，GetView里面实现不同的算法。外部使用的时候也可以根据不同的数据源，切换不同的Adapter。
 
 
+##### 5、原型模式
+
+定义：用原型实例指定创建对象的种类，并通过拷贝这些原型创建新的对象。
+
+```
+
+public class Person{  
+    private String name;  
+    private int age;  
+    private double height;  
+    private double weight;  
+  
+    public Person(){  
+          
+    }  
+  
+    public String getName() {  
+        return name;  
+    }  
+  
+    public void setName(String name) {  
+        this.name = name;  
+    }  
+  
+    public int getAge() {  
+        return age;  
+    }  
+  
+    public void setAge(int age) {  
+        this.age = age;  
+    }  
+  
+    public double getHeight() {  
+        return height;  
+    }  
+  
+    public void setHeight(double height) {  
+        this.height = height;  
+    }  
+  
+    public double getWeight() {  
+        return weight;  
+    }  
+  
+    public void setWeight(double weight) {  
+        this.weight = weight;  
+    }  
+  
+    @Override  
+    public String toString() {  
+        return "Person{" +  
+                "name='" + name + '\'' +  
+                ", age=" + age +  
+                ", height=" + height +  
+                ", weight=" + weight +  
+                '}';  
+    }  
+} 
+
+```
+
+要实现原型模式，按照以下步骤来：
+
+1，实现一个Cloneable接口
+
+```
+public class Person implements Cloneable{  
+  
+} 
+
+```
+
+重写Object的clone方法，在此方法中实现拷贝逻辑
+
+```
+
+@Override  
+public Object clone(){  
+    Person person=null;  
+    try {  
+        person=(Person)super.clone();  
+        person.name=this.name;  
+        person.weight=this.weight;  
+        person.height=this.height;  
+        person.age=this.age;  
+    } catch (CloneNotSupportedException e) {  
+        e.printStackTrace();  
+    }  
+    return person;  
+} 
+
+```
+
+测试一下
+
+```
+
+public class Main {  
+    public static void main(String [] args){  
+        Person p=new Person();  
+        p.setAge(18);  
+        p.setName("张三");  
+        p.setHeight(178);  
+        p.setWeight(65);  
+        System.out.println(p);  
+  
+        Person p1= (Person) p.clone();  
+        System.out.println(p1);  
+  
+        p1.setName("李四");  
+        System.out.println(p);  
+        System.out.println(p1);  
+    }  
+} 
+
+```
+
+```
+输出结果如下：
+Person{name=’张三’, age=18, height=178.0, weight=65.0}
+Person{name=’张三’, age=18, height=178.0, weight=65.0}
+Person{name=’张三’, age=18, height=178.0, weight=65.0}
+Person{name=’李四’, age=18, height=178.0, weight=65.0}
+```
+
+试想一下，两个不同的人，除了姓名不一样，其他三个属性都一样，用原型模式进行拷贝就会显得异常简单，这也是原型模式的应用场景之一
+
+假设Person类还有一个属性叫兴趣集合，是一个List集合，就酱紫：
+
+```
+
+private ArrayList<String> hobbies=new ArrayList<String>();  
+  
+public ArrayList<String> getHobbies() {  
+    return hobbies;  
+}  
+  
+public void setHobbies(ArrayList<String> hobbies) {  
+    this.hobbies = hobbies;  
+} 
+```
+
+在进行拷贝的时候就要注意了，如果还是跟之前的一样操作，就会发现其实两个不同的人的兴趣集合的是指向同一个引用，
+我们对其中一个人的这个集合属性进行操作 ，另一个人的这个属性也会相应的变化，其实导致这个问题的本质原因是我们只进行了浅拷贝，
+也就是指拷贝了引用，最终两个对象指向的引用是同一个，一个发生变化，另一个也会发生拜变化。显然解决方法就是使用深拷贝
+
+```
+
+@Override  
+public Object clone(){  
+    Person person=null;  
+    try {  
+        person=(Person)super.clone();  
+        person.name=this.name;  
+        person.weight=this.weight;  
+        person.height=this.height;  
+        person.age=this.age;  
+  
+        person.hobbies=(ArrayList<String>)this.hobbies.clone();  
+    } catch (CloneNotSupportedException e) {  
+        e.printStackTrace();  
+    }  
+    return person;  
+}  
+```
+
+不再是直接引用，而是拷贝了一份，
+其实有的时候我们看到的原型模式更多的是另一种写法：在clone函数里调用构造函数，构造函数里传入的参数是该类对象，然后在函数中完成逻辑拷贝
 
 
+```
+
+@Override  
+public Object clone(){  
+    return new Person(this);  
+}  
 
 
+public Person(Person person){  
+    this.name=person.name;  
+    this.weight=person.weight;  
+    this.height=person.height;  
+    this.age=person.age;  
+    this.hobbies= new ArrayList<String>(hobbies);  
+}
+
+其实都差不多，只是写法不一样而已
+现在 来看看Android中的原型模式：
+
+先看Bundle类，
+
+```
+public Object clone() {  
+    return new Bundle(this);  
+}   
+public Bundle(Bundle b) {  
+    super(b);  
+  
+    mHasFds = b.mHasFds;  
+    mFdsKnown = b.mFdsKnown;  
+} 
+
+```
+
+然后是Intent类
 
 
+```
 
+@Override  
+public Object clone() {  
+    return new Intent(this);  
+}  
+public Intent(Intent o) {  
+    this.mAction = o.mAction;  
+    this.mData = o.mData;  
+    this.mType = o.mType;  
+    this.mPackage = o.mPackage;  
+    this.mComponent = o.mComponent;  
+    this.mFlags = o.mFlags;  
+    this.mContentUserHint = o.mContentUserHint;  
+    if (o.mCategories != null) {  
+        this.mCategories = new ArraySet<String>(o.mCategories);  
+    }  
+    if (o.mExtras != null) {  
+        this.mExtras = new Bundle(o.mExtras);  
+    }  
+    if (o.mSourceBounds != null) {  
+        this.mSourceBounds = new Rect(o.mSourceBounds);  
+    }  
+    if (o.mSelector != null) {  
+        this.mSelector = new Intent(o.mSelector);  
+    }  
+    if (o.mClipData != null) {  
+        this.mClipData = new ClipData(o.mClipData);  
+    }  
+}  
+    
+```
 
+用法也十分简单，一旦我们要用的Intent与现在的一个Intent很多东西都一样，那我们就可以直接拷贝现有的Intent，再修改不同的地方，便可以直接使用
+    
+```
+Uri uri = Uri.parse("smsto:10086");      
+Intent shareIntent = new Intent(Intent.ACTION_SENDTO, uri);      
+shareIntent.putExtra("sms_body", "hello");      
+  
+Intent intent = (Intent)shareIntent.clone() ;  
+startActivity(intent);  
+```
+
+网络请求中最常用的OkHttp中，也应用了原型模式,就在OkHttpClient类中，他实现了Cloneable接口
+    
+```
+
+/** Returns a shallow copy of this OkHttpClient. */  
+@Override   
+public OkHttpClient clone() {  
+    return new OkHttpClient(this);  
+}  
+private OkHttpClient(OkHttpClient okHttpClient) {  
+    this.routeDatabase = okHttpClient.routeDatabase;  
+    this.dispatcher = okHttpClient.dispatcher;  
+    this.proxy = okHttpClient.proxy;  
+    this.protocols = okHttpClient.protocols;  
+    this.connectionSpecs = okHttpClient.connectionSpecs;  
+    this.interceptors.addAll(okHttpClient.interceptors);  
+    this.networkInterceptors.addAll(okHttpClient.networkInterceptors);  
+    this.proxySelector = okHttpClient.proxySelector;  
+    this.cookieHandler = okHttpClient.cookieHandler;  
+    this.cache = okHttpClient.cache;  
+    this.internalCache = cache != null ? cache.internalCache : okHttpClient.internalCache;  
+    this.socketFactory = okHttpClient.socketFactory;  
+    this.sslSocketFactory = okHttpClient.sslSocketFactory;  
+    this.hostnameVerifier = okHttpClient.hostnameVerifier;  
+    this.certificatePinner = okHttpClient.certificatePinner;  
+    this.authenticator = okHttpClient.authenticator;  
+    this.connectionPool = okHttpClient.connectionPool;  
+    this.network = okHttpClient.network;  
+    this.followSslRedirects = okHttpClient.followSslRedirects;  
+    this.followRedirects = okHttpClient.followRedirects;  
+    this.retryOnConnectionFailure = okHttpClient.retryOnConnectionFailure;  
+    this.connectTimeout = okHttpClient.connectTimeout;  
+    this.readTimeout = okHttpClient.readTimeout;  
+    this.writeTimeout = okHttpClient.writeTimeout;  
+}  
+```
 
 
 
