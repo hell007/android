@@ -72,11 +72,12 @@ public class ActivityManager {
       
     public static ActivityManager getInstance(){  
         if (instance == null) {  
-        synchronized (ActivityManager.class) {  
-            if (instance == null) {  
-                instance = new ActivityManager();  
-            }  
-        }  
+            synchronized (ActivityManager.class) {  
+                if (instance == null) {  
+                    instance = new ActivityManager();  
+                }  
+            }
+        }
         return instance;  
     }  
       
