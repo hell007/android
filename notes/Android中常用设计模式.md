@@ -986,50 +986,49 @@ public Bundle(Bundle b) {
 
 然后是Intent类
 
+```
+    @Override  
+    public Object clone() {  
+        return new Intent(this);  
+    }  
+
+    public Intent(Intent o) {  
+        this.mAction = o.mAction;  
+        this.mData = o.mData;  
+        this.mType = o.mType;  
+        this.mPackage = o.mPackage;  
+        this.mComponent = o.mComponent;  
+        this.mFlags = o.mFlags;  
+        this.mContentUserHint = o.mContentUserHint;  
+        if (o.mCategories != null) {  
+            this.mCategories = new ArraySet<String>(o.mCategories);  
+        }  
+        if (o.mExtras != null) {  
+            this.mExtras = new Bundle(o.mExtras);  
+        }  
+        if (o.mSourceBounds != null) {  
+            this.mSourceBounds = new Rect(o.mSourceBounds);  
+        }  
+        if (o.mSelector != null) {  
+            this.mSelector = new Intent(o.mSelector);  
+        }  
+        if (o.mClipData != null) {  
+            this.mClipData = new ClipData(o.mClipData);  
+        }  
+    }  
 
 ```
 
-@Override  
-public Object clone() {  
-    return new Intent(this);  
-}  
-
-public Intent(Intent o) {  
-    this.mAction = o.mAction;  
-    this.mData = o.mData;  
-    this.mType = o.mType;  
-    this.mPackage = o.mPackage;  
-    this.mComponent = o.mComponent;  
-    this.mFlags = o.mFlags;  
-    this.mContentUserHint = o.mContentUserHint;  
-    if (o.mCategories != null) {  
-        this.mCategories = new ArraySet<String>(o.mCategories);  
-    }  
-    if (o.mExtras != null) {  
-        this.mExtras = new Bundle(o.mExtras);  
-    }  
-    if (o.mSourceBounds != null) {  
-        this.mSourceBounds = new Rect(o.mSourceBounds);  
-    }  
-    if (o.mSelector != null) {  
-        this.mSelector = new Intent(o.mSelector);  
-    }  
-    if (o.mClipData != null) {  
-        this.mClipData = new ClipData(o.mClipData);  
-    }  
-}  
+用法也十分简单，一旦我们要用的Intent与现在的一个Intent很多东西都一样，那我们就可以直接拷贝现有的Intent，
+再修改不同的地方，便可以直接使用
     
 ```
+    Uri uri = Uri.parse("smsto:10086");      
+    Intent shareIntent = new Intent(Intent.ACTION_SENDTO, uri);      
+    shareIntent.putExtra("sms_body", "hello");      
 
-用法也十分简单，一旦我们要用的Intent与现在的一个Intent很多东西都一样，那我们就可以直接拷贝现有的Intent，再修改不同的地方，便可以直接使用
-    
-```
-Uri uri = Uri.parse("smsto:10086");      
-Intent shareIntent = new Intent(Intent.ACTION_SENDTO, uri);      
-shareIntent.putExtra("sms_body", "hello");      
-  
-Intent intent = (Intent)shareIntent.clone() ;  
-startActivity(intent);  
+    Intent intent = (Intent)shareIntent.clone() ;  
+    startActivity(intent);  
 
 ```
 
@@ -1037,36 +1036,37 @@ startActivity(intent);
     
 ```
 
-@Override   
-public OkHttpClient clone() {  
-    return new OkHttpClient(this);  
-}  
-private OkHttpClient(OkHttpClient okHttpClient) {  
-    this.routeDatabase = okHttpClient.routeDatabase;  
-    this.dispatcher = okHttpClient.dispatcher;  
-    this.proxy = okHttpClient.proxy;  
-    this.protocols = okHttpClient.protocols;  
-    this.connectionSpecs = okHttpClient.connectionSpecs;  
-    this.interceptors.addAll(okHttpClient.interceptors);  
-    this.networkInterceptors.addAll(okHttpClient.networkInterceptors);  
-    this.proxySelector = okHttpClient.proxySelector;  
-    this.cookieHandler = okHttpClient.cookieHandler;  
-    this.cache = okHttpClient.cache;  
-    this.internalCache = cache != null ? cache.internalCache : okHttpClient.internalCache;  
-    this.socketFactory = okHttpClient.socketFactory;  
-    this.sslSocketFactory = okHttpClient.sslSocketFactory;  
-    this.hostnameVerifier = okHttpClient.hostnameVerifier;  
-    this.certificatePinner = okHttpClient.certificatePinner;  
-    this.authenticator = okHttpClient.authenticator;  
-    this.connectionPool = okHttpClient.connectionPool;  
-    this.network = okHttpClient.network;  
-    this.followSslRedirects = okHttpClient.followSslRedirects;  
-    this.followRedirects = okHttpClient.followRedirects;  
-    this.retryOnConnectionFailure = okHttpClient.retryOnConnectionFailure;  
-    this.connectTimeout = okHttpClient.connectTimeout;  
-    this.readTimeout = okHttpClient.readTimeout;  
-    this.writeTimeout = okHttpClient.writeTimeout;  
-}  
+    @Override   
+    public OkHttpClient clone() {  
+        return new OkHttpClient(this);  
+    }  
+    private OkHttpClient(OkHttpClient okHttpClient) {  
+        this.routeDatabase = okHttpClient.routeDatabase;  
+        this.dispatcher = okHttpClient.dispatcher;  
+        this.proxy = okHttpClient.proxy;  
+        this.protocols = okHttpClient.protocols;  
+        this.connectionSpecs = okHttpClient.connectionSpecs;  
+        this.interceptors.addAll(okHttpClient.interceptors);  
+        this.networkInterceptors.addAll(okHttpClient.networkInterceptors);  
+        this.proxySelector = okHttpClient.proxySelector;  
+        this.cookieHandler = okHttpClient.cookieHandler;  
+        this.cache = okHttpClient.cache;  
+        this.internalCache = cache != null ? cache.internalCache : okHttpClient.internalCache;  
+        this.socketFactory = okHttpClient.socketFactory;  
+        this.sslSocketFactory = okHttpClient.sslSocketFactory;  
+        this.hostnameVerifier = okHttpClient.hostnameVerifier;  
+        this.certificatePinner = okHttpClient.certificatePinner;  
+        this.authenticator = okHttpClient.authenticator;  
+        this.connectionPool = okHttpClient.connectionPool;  
+        this.network = okHttpClient.network;  
+        this.followSslRedirects = okHttpClient.followSslRedirects;  
+        this.followRedirects = okHttpClient.followRedirects;  
+        this.retryOnConnectionFailure = okHttpClient.retryOnConnectionFailure;  
+        this.connectTimeout = okHttpClient.connectTimeout;  
+        this.readTimeout = okHttpClient.readTimeout;  
+        this.writeTimeout = okHttpClient.writeTimeout;  
+    }  
+    
 ```
 
 
