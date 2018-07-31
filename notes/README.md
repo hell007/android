@@ -14,7 +14,9 @@
 
 ##### 视频播放
 
-1. []()
+1. [NiceVieoPlayer](https://github.com/xiaoyanger0825/NiceVieoPlayer)
+
+2. [PlayerBase](https://github.com/jiajunhui/PlayerBase)
 
 
 ##### pull
