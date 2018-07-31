@@ -993,6 +993,7 @@ public Bundle(Bundle b) {
 public Object clone() {  
     return new Intent(this);  
 }  
+
 public Intent(Intent o) {  
     this.mAction = o.mAction;  
     this.mData = o.mData;  
@@ -1029,13 +1030,13 @@ shareIntent.putExtra("sms_body", "hello");
   
 Intent intent = (Intent)shareIntent.clone() ;  
 startActivity(intent);  
+
 ```
 
 网络请求中最常用的OkHttp中，也应用了原型模式,就在OkHttpClient类中，他实现了Cloneable接口
     
 ```
 
-/** Returns a shallow copy of this OkHttpClient. */  
 @Override   
 public OkHttpClient clone() {  
     return new OkHttpClient(this);  
