@@ -972,15 +972,15 @@ public Person(Person person){
 先看Bundle类，
 
 ```
-public Object clone() {  
-    return new Bundle(this);  
-}   
-public Bundle(Bundle b) {  
-    super(b);  
-  
-    mHasFds = b.mHasFds;  
-    mFdsKnown = b.mFdsKnown;  
-} 
+    public Object clone() {  
+        return new Bundle(this);  
+    }   
+    public Bundle(Bundle b) {  
+        super(b);  
+
+        mHasFds = b.mHasFds;  
+        mFdsKnown = b.mFdsKnown;  
+    } 
 
 ```
 
