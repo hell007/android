@@ -1,7 +1,10 @@
-
-
-
 ## android开发知识收藏
+
+##### 线程
+
+1. [JAVA\Android 多线程实现方式及并发与同步](https://blog.csdn.net/csdn_aiyang/article/details/65442540)
+
+2. [Java/Android HandlerThread优化及线程池的使用](https://blog.csdn.net/csdn_aiyang/article/details/61917860)
 
 ##### DataBinding
 
