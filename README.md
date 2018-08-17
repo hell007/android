@@ -3,6 +3,11 @@
 #  Android开发知识汇总
 
 
+## Android 设计规范
+
+[一款APP之Android设计规范](http://www.uisdc.com/android-design-guideline-in-app#)
+
+
 ## Android 目前最稳定和高效的UI适配方案
 
  [dp直接适配](http://www.cnblogs.com/tc310/p/9200478.html)
