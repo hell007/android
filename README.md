@@ -7,6 +7,10 @@
 
 [一款APP之Android设计规范](http://www.uisdc.com/android-design-guideline-in-app#)
 
+[Android TV 开发汇总](https://www.jianshu.com/p/a54e4f6a21ed)
+
+[Android TV开发入门](https://www.jianshu.com/p/d393866e4fa5)
+
 
 ## Android 目前最稳定和高效的UI适配方案
 
