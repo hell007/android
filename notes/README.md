@@ -27,6 +27,10 @@
 
 [Google VR全景图片与视频功能开发详解](https://github.com/JackChan1999/GoogleVR)
 
+[Android三种姿势带你玩转360度全景图功能](http://www.jcodecraeer.com/a/anzhuokaifa/2017/0927/8559.html)
+
+[Android三种姿势带你玩转360度全景图功能](https://github.com/CN-ZPH/Three360panorama)
+
 ##### pull
 
 1. [安卓开发由一个APP拉起另一个APP的方法总结](https://blog.csdn.net/zang_chen/article/details/76677846)
