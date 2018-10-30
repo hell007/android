@@ -21,6 +21,11 @@
 
 2. [PlayerBase](https://github.com/jiajunhui/PlayerBase)
 
+##### Google VR全景图片与视频
+
+[Google VR全景图片与视频功能开发详解](https://blog.csdn.net/axi295309066/article/details/61014105)
+
+[Google VR全景图片与视频功能开发详解](https://github.com/JackChan1999/GoogleVR)
 
 ##### pull
 
